@@ -1,8 +1,13 @@
-<h1>Current Player: {{ player }}</h1>
+<div class="header">
+  <h1>Current Player: {{ player }}</h1>
+  <button mat-stroked-button color="accent" (click)="newGame()">
+    Start New Game
+  </button>
+</div>
 
-<button (click)="newGame()">Start New Game</button>
-
-<h2 *ngIf="winner">Player {{ winner }} has won the game!</h2>
+<p>
+  Winner: <strong>{{ winner ? winner : "No winners yet." }}</strong>
+</p>
 
 <main>
   <app-square

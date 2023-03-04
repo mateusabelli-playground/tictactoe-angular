@@ -3,7 +3,11 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-square',
   template: `
-    <button>
+    <button
+      mat-flat-button
+      disableRipple="true"
+      [color]="value === 'X' ? 'accent' : value === 'O' ? 'primary' : ''"
+    >
       {{ value }}
     </button>
   `,
@@ -11,8 +15,8 @@ import { Component, Input } from '@angular/core';
     `
       button {
         font-size: 4rem;
-        height: 100%;
-        width: 100%;
+        min-height: 100%;
+        min-width: 100%;
       }
     `,
   ],

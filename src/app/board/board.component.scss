@@ -8,3 +8,12 @@ app-square {
   border: 1px solid gray;
   height: 200px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 1.3rem;
+}
