@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tictactoe-firebase": {
+      "hosting": {
+        "tictactoe-angular": [
+          "tictactoe-firebase-f012e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tictactoe-firebase"
+  }
+}
