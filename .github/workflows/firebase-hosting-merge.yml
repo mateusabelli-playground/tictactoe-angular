@@ -4,7 +4,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,13 +16,6 @@ jobs:
           cache: "npm"
       - name: Setup dependencies and build
         run: npm ci && npm run build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3.3.0
       - name: Setup Firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
