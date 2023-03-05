@@ -20,6 +20,8 @@ jobs:
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
       - name: Setup Firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
